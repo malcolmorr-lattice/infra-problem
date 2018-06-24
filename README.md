@@ -16,37 +16,30 @@ This project deploys a sample 2 Tier web applciation using NGINX to serv static 
 
 Please follow  these instaructions to get  a copy of the project up and running on your (ubuntu) local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Say what the step will be
-First, add the GPG key for the official Docker repository to the system:
-	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-Add the Docker repository to APT sources:
-	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-Next, update the package database with the Docker packages from the newly added repo:
-	sudo apt-get update
-Make sure you are about to install from the Docker repo instead of the default Ubuntu 16.04 repo:
-	apt-cache policy docker-ce
-Finally, install Docker:
-	sudo apt-get install -y docker-ce
-If you want to avoid typing sudo whenever you run the docker command, add your username to the docker group:
-	sudo usermod -aG docker ${USER}
-	
-Netx Install Docker Compose
-	sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-Next set the permissions:
-	sudo chmod +x /usr/local/bin/docker-compose
-Then we'll verify that the installation was successful by checking the version:
-	docker-compose --version
+Clone the following project https://github.com/malcolmorr-lattice/infra-problem.git and the CD into the directory
+ ```
+1. git clone https://github.com/malcolmorr-lattice/infra-problem.git
+2. cd infra-problem/
 ```
-Give the example
+Run the development enviornment build script to install the docker engine and docker compose binaries
 ```
-
-And repeat
-
+3. ./build-dev.sh
 ```
-until finished
+Run the container build script to build the base containers
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
+4.  ./build-docker-images.sh and you will see the 4 images when you run the docker image ls command
+REPOSITORY          TAG                 IMAGE ID            CREATED                  SIZE
+mywebserver         latest              xx       	    Less than a second ago   18MB
+myappserver         latest              xx                  2 seconds ago            110MB
+nginx               alpine              xx                  2 weeks ago              18MB
+tomcat              9.0.7-jre8-alpine   xx                  2 months ago             106MB
+```
+Finally start the applications service by running the docker-compose command
+```
+5. docker-compose up -d and then using the docker ps comamnd to verify the two servies are up
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                
+94a2d771e50f        myappserver         "catalina.sh run"        2 minutes ago       Up 20 seconds       8080/tcp             
+0d75b1981666        mywebserver         "nginx -g 'daemon of…"   2 minutes ago       Up 20 seconds       0.0.0.0:80->80/tcp   
 
 ## Running the tests
 
