@@ -1,0 +1,14 @@
+version: '2'
+services:
+  nginx:
+    image: mywebserver 
+    ports:
+      - "80:80"
+    networks:
+      - appnet
+  javaApp:
+    image: myappserver
+    networks:
+      - appnet
+networks:
+  appnet:
