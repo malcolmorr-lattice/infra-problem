@@ -12,8 +12,9 @@ then
 	/usr/bin/curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - #add docker key
 	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" #add docker repo`
 	apt-cache policy docker-ce
+	sudo apt-get update
 	sudo apt-get install -y docker-ce #add docker engine
-	sudo usermod -aG docker ${USER} #set coker user to use docker 
+	sudo usermod -a -G docker $USER #set user to use docker 
 	echo "installing Docker Compose version $var3" #download compose
 	sudo /usr/bin/curl -L https://github.com/docker/compose/releases/download/$var3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
         sudo chmod +x /usr/local/bin/docker-compose	
