@@ -14,6 +14,7 @@ then
 	apt-cache policy docker-ce
 	sudo apt-get update
 	sudo apt-get install -y docker-ce #add docker engine
+	sudo systemctl start docker
 	sudo usermod -a -G docker $USER #set user to use docker 
 	echo "installing Docker Compose version $var3" #download compose
 	sudo /usr/bin/curl -L https://github.com/docker/compose/releases/download/$var3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
