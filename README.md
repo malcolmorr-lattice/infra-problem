@@ -1,6 +1,6 @@
 # Infrastructure project 
 
-This project deploys a sample 2 Tier web application using NGINX to serve static content and tomcat to host the dynamic content. NGINX and tomcat are hosted in separate containers and connected through a private network. The NGINX container exposes port 80 on the host and is therefore accessible from other hosts. NGIX can also eaily support SSL termination supporting a more secure transport without complicating the applciation configuration.
+This project deploys a sample 2 Tier web application using NGINX to serve static content and tomcat to host the dynamic content. NGINX and tomcat are hosted in separate containers and connected through a private network. The NGINX container exposes port 80 on the host and is therefore accessible from other hosts. NGIX can also eaily support SSL termination providing a more secure transport without complicating the applciation configuration.
 
 ![Screenshot](https://github.com/malcolmorr-lattice/infra-problem/blob/master/images/intro-image.JPG?raw=true)
 
