@@ -58,11 +58,17 @@ Testing can be achieved by browsing to the http endpoint on port 80 which will c
 ```
 ## Deployment
 
-This solution would work easily on any public cloud platform and this was a conscious decision as no there are no functional or non-functional requirements which indicate which platform would make most sense. An illustration of how this solution would be deployed on Aws is included below: -
+This solution would work easily on any public cloud platform and this was a conscious decision as no there are no functional or non-functional requirements which indicate which platform would make most sense. An illustration of how this solution would be deployed on AWS is included below: -
+
 The 1st step is to provide a docker platform to run the container on, ECS could be used however a more flexible IaaS solution is proposed initially to support the development of the solution. ECS or Fargate should be reviewed when worldwide releases are being considered and the overall solution is understood.  There are two options for building the EC2 instances: -
 ```
 1.	Use the same build-dev.sh script and incorporate into the EC2 user (cloud-init) data, this has been tested and results in the same build environment across dev and production
 2.	Use the same build-dev.sh script but use packer to build a custom AMI based on the ubuntu ami (ami-a4dc46db)
+3.	Use cloudFormation to build the EC2 instances using user data or custom AMI’s
+```
+Building the containers and deploying the code could be as simple as running the build-docker-images.sh and the docker-compose command manually again giving you parity with the development environment but a more effective approach would be to integrate it into a CI pipeline using AWS CodeBuild and AWS ECR (repository) to host build and host the containers and then CodePipeline to deploy the code onto the ECS clusters or Cloudformation stacks depending on the platform choices made closer to worldwide deployment and whether or not an existing CI/CD toolset exists.
+The final step is to sort out the persistence backend, leveraging services such as DynamoDB 
+
 ```
 
 
