@@ -60,29 +60,18 @@ Give an example
 
 ### And coding style tests
 
-Explain what these tests test and why
+Testing can be achieved by browsing to the http endpoint on port 80 which will connect to the tomcat server or the /health.html to verify the static content is being served correctly
 
 ```
-Give an example
+1. http://100.100.100.99
+2. http://100.100.100.99/health.html
 ```
 
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
