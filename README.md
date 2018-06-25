@@ -66,13 +66,14 @@ The 1st step is to provide a docker platform to run the container on, ECS could 
 2.	Use the same build-dev.sh script but use packer to build a custom AMI based on the ubuntu ami (ami-a4dc46db)
 3.	Use cloudFormation to build the EC2 instances using user data or custom AMI’s
 ```
-Building the containers and deploying the code could be as simple as running the build-docker-images.sh and the docker-compose command manually again giving you parity with the development environment but a more effective approach would be to integrate it into a CI pipeline using AWS CodeBuild and AWS ECR (repository) to host build and host the containers and then CodePipeline to deploy the code onto the ECS clusters or Cloudformation stacks depending on the platform choices made closer to worldwide deployment and whether or not an existing CI/CD toolset exists.
+Building the containers and deploying the code could be as simple as running the build-docker-images.sh and the docker-compose command manually again giving you parity with the development environment but a more effective approach would be to integrate it into a CI pipeline using AWS CodeBuild and AWS ECR (repository) to  build and host the containers and then AWS CodePipeline to deploy the code onto the ECS clusters or Cloudformation stack depending on the platform choices made closer to worldwide deployment and whether or not an existing CI/CD toolset exists.
+
 The final step is to sort out the persistence backend, leveraging services such as DynamoDB 
 
 ```
 
 
-## Porblem Approach
+## Problem Approach
 What principles did you apply?
 Explanation of the decisions you made and why
 What end state do you envision (if you run out of time to implement)?
