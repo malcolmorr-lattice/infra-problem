@@ -47,7 +47,7 @@ use the docker ps comamnd to verify the two servies are up
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                
 94a2d771e50f        myappserver         "catalina.sh run"        2 minutes ago       Up 20 seconds       8080/tcp             
 0d75b1981666        mywebserver         "nginx -g 'daemon of…"   2 minutes ago       Up 20 seconds       0.0.0.0:80->80/tcp   
-
+ ```  
 ## Running the tests
 
 Testing can be achieved by browsing to the http endpoint on port 80 which will connect to the tomcat server or the /health.html to verify the static content is being served correctly
@@ -55,7 +55,7 @@ Testing can be achieved by browsing to the http endpoint on port 80 which will c
 ```
 1. http://100.100.100.99
 2. http://100.100.100.99/health.htmlExplain how to run the automated tests for this system
-
+```
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
