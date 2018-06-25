@@ -59,7 +59,7 @@ Testing can be achieved by browsing to the http endpoint on port 80 which will c
 ```
 ## Deployment
 
-This solution would work easily on any public cloud platform and this was a conscious decision as no there are no functional or non-functional requirements which indicate which platform would make most sense. An illustration of how this solution would be deployed on AWS is included below: -
+This solution would work easily on any public cloud platform and this was a conscious decision as there are no functional or non-functional requirements which indicate which platform would make most sense. An illustration of how this solution would be deployed on AWS is included below: -
 
 The 1st step is to provide a docker platform to run the container on, ECS could be used however a more flexible IaaS solution is proposed initially to support the development of the solution. ECS or Fargate should be reviewed when worldwide releases are being considered and the overall solution is understood.  There are two options for building the EC2 instances: -
 ```
