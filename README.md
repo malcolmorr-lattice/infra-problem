@@ -48,24 +48,11 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
 Testing can be achieved by browsing to the http endpoint on port 80 which will connect to the tomcat server or the /health.html to verify the static content is being served correctly
 
 ```
 1. http://100.100.100.99
-2. http://100.100.100.99/health.html
-```
+2. http://100.100.100.99/health.htmlExplain how to run the automated tests for this system
 
 ## Deployment
 
