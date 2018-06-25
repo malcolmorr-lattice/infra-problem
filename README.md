@@ -91,7 +91,7 @@ What is your recommendation for future work if time allows?
 ```
 Focus on a getting a scalable and distributed persistence tier 
 Focus on which container platform (ECS, Kubernetes, Swarm ..) makes most sense for worldwide deployment
-Focus 
+Focus on how the release process will tie into the container build process  
 ```
 
 ## Author
