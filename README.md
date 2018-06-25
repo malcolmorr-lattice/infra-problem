@@ -1,11 +1,11 @@
 # Infrastructure project 
 
-This project deploys a sample 2 Tier web applciation using NGINX to serve static content and tomcat to host the dynamic content. NGINX and tomcat are hosted in seperate containers and connected through a private network. The NGINX container exposes port 80 on the host and is therefore accessible from other hosts.
+This project deploys a sample 2 Tier web application using NGINX to serve static content and tomcat to host the dynamic content. NGINX and tomcat are hosted in separate containers and connected through a private network. The NGINX container exposes port 80 on the host and is therefore accessible from other hosts.
 ![Screenshot](https://github.com/malcolmorr-lattice/infra-problem/blob/master/images/intro-image.JPG?raw=true)
 
-The diagram above illustartes the scaline options using either multiple application containers using NGINX loadbalancing or using multiple hosts (with muliple containers) and an external loadbalancer as the persistenace tier is file based thsi will cause issues as each app container will currently see its own posts only and when teh container is stopped the post will disappear.
+The diagram above illustrates the scaling options using either multiple application containers using NGINX load balancing or using multiple hosts (with multiple containers) and an external load balancer as the persistence tier is file based this will cause issues as each app container will currently see its own posts only and when the container is stopped the post will disappear.
 
-A simple solution is to use Container volumes and a remote file system such as NFS/EFS but a more suitable solution woudl be to consider a databse solution
+A simple solution is to use Container volumes and a remote file system such as NFS/EFS but a more suitable solution would be to consider a database solution
 
 ## Getting Started
 
