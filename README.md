@@ -1,6 +1,7 @@
 # Infrastructure project 
 
-This project deploys a sample 2 Tier web application using NGINX to serve static content and tomcat to host the dynamic content. NGINX and tomcat are hosted in separate containers and connected through a private network. The NGINX container exposes port 80 on the host and is therefore accessible from other hosts.
+This project deploys a sample 2 Tier web application using NGINX to serve static content and tomcat to host the dynamic content. NGINX and tomcat are hosted in separate containers and connected through a private network. The NGINX container exposes port 80 on the host and is therefore accessible from other hosts. NGIX can also eaily support SSL termination supporting a more secure transport without complicating the applciation configuration.
+
 ![Screenshot](https://github.com/malcolmorr-lattice/infra-problem/blob/master/images/intro-image.JPG?raw=true)
 
 The diagram above illustrates the scaling options using either multiple application containers using NGINX load balancing or using multiple hosts (with multiple containers) and an external load balancer. However as the persistence tier is file based this will cause issues as each app container will currently see its own posts only and when the container is stopped the post will disappear.
@@ -77,6 +78,7 @@ What principles did you apply?
 2. Immutable - don’t make changes to the code on the fly, encapsulate it in a container and build new containers
 3. monitor – include some capability to validate which components are healthy  
 4. portability – don’t make too many choices at this point that would tie you into a platform such as AWS
+5. secuirty - make choices that support good security practices
 
 Explanation of the decisions you made and why?
 
