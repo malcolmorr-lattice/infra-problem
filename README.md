@@ -3,6 +3,7 @@
 This project deploys a sample 2 Tier web applciation using NGINX to serve static content and tomcat to host the dynamic content. NGINX and tomcat are hosted in seperate containers and connected through a private network. The NGINX container exposes port 80 on the host and is therefore accessible from other hosts.
 
 [https://github.com/malcolmorr-lattice/infra-problem/blob/master/images/intro-image.JPG]
+![Screenshot](https://github.com/malcolmorr-lattice/infra-problem/blob/master/images/intro-image.JPG?raw=true)
 
 
 
