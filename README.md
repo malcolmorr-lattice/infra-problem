@@ -72,12 +72,12 @@ The final step is to sort out the persistence backend, leveraging services such 
 
 ## Problem Approach
 What principles did you apply?
-```
+**
 1. Simplicity - make it easy for the developer to use and understand
 2. Immutable - don’t make changes to the code on the fly, encapsulate it in a container and build new containers
 3. monitor – include some capability to validate which components are healthy  
 4. portability – don’t make too many choices at this point that would tie you into a platform such as AWS
-```
+**
 Explanation of the decisions you made and why
 ```
 You can overthink these solutions and without understanding a bit more about how the client (company news) works and is trying to achieve I didn’t want to do too much based on incorrect assumptions. Using container and scripts was the simplest way to get something (MVP) working that we could work together on to refine.
