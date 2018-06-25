@@ -70,16 +70,23 @@ Building the containers and deploying the code could be as simple as running the
 
 The final step is to sort out the persistence backend, leveraging services such as DynamoDB 
 
-```
-
 
 ## Problem Approach
 What principles did you apply?
+```
+```
 Explanation of the decisions you made and why
-What end state do you envision (if you run out of time to implement)?
+```
+```
 Why were certain tools selected?
+```
+```
 Why you configured the tools as you did?
+```
+```
 What is your recommendation for future work if time allows?
+```
+```
 
 ## Author
 
