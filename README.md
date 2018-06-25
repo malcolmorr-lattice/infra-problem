@@ -19,7 +19,7 @@ A simple solution is to use Container volumes and a remote file system such as N
 
 ### Installing
 
-Please follow  these instaructions to get  a copy of the project up and running on your (ubuntu) local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Please follow  these instructions to get  a copy of the project up and running on your (ubuntu) local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Clone the following project https://github.com/malcolmorr-lattice/infra-problem.git and the CD into the directory
  ```
