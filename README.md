@@ -78,7 +78,7 @@ What principles did you apply?
 2. Immutable - don’t make changes to the code on the fly, encapsulate it in a container and build new containers
 3. monitor – include some capability to validate which components are healthy  
 4. portability – don’t make too many choices at this point that would tie you into a platform such as AWS
-5. secuirty - make choices that support good security practices
+5. security - make choices that support good security practices
 
 Explanation of the decisions you made and why?
 
