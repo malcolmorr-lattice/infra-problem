@@ -32,7 +32,8 @@ Run the development enviornment build script to install the docker engine and do
 ```
 Run the container build script to build the base containers
 ```
-4.  ./build-docker-images.sh and you will see the 4 images when you run the docker image ls command
+4.  ./build-docker-images.sh  
+you will see the 4 images when you run the docker image ls command
 REPOSITORY          TAG                 IMAGE ID            CREATED                  SIZE
 mywebserver         latest              xx       	    Less than a second ago   18MB
 myappserver         latest              xx                  2 seconds ago            110MB
@@ -41,7 +42,8 @@ tomcat              9.0.7-jre8-alpine   xx                  2 months ago        
 ```
 Finally start the applications service by running the docker-compose command
 ```
-5. docker-compose up -d and then using the docker ps comamnd to verify the two servies are up
+5. docker-compose up -d 
+use the docker ps comamnd to verify the two servies are up
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                
 94a2d771e50f        myappserver         "catalina.sh run"        2 minutes ago       Up 20 seconds       8080/tcp             
 0d75b1981666        mywebserver         "nginx -g 'daemon of…"   2 minutes ago       Up 20 seconds       0.0.0.0:80->80/tcp   
