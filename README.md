@@ -58,10 +58,22 @@ Testing can be achieved by browsing to the http endpoint on port 80 which will c
 ```
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This solution would work easily on any public cloud platform and this was a conscious decision as no there are no functional or non-functional requirements which indicate which platform would make most sense. An illustration of how this solution would be deployed on Aws is included below: -
+The 1st step is to provide a docker platform to run the container on, ECS could be used however a more flexible IaaS solution is proposed initially to support the development of the solution. ECS or Fargate should be reviewed when worldwide releases are being considered and the overall solution is understood.  There are two options for building the EC2 instances: -
+```
+1.	Use the same build-dev.sh script and incorporate into the EC2 user (cloud-init) data, this has been tested and results in the same build environment across dev and production
+2.	Use the same build-dev.sh script but use packer to build a custom AMI based on the ubuntu ami (ami-a4dc46db)
+```
 
 
+## Porblem Approach
+What principles did you apply?
+Explanation of the decisions you made and why
+What end state do you envision (if you run out of time to implement)?
+Why were certain tools selected?
+Why you configured the tools as you did?
+What is your recommendation for future work if time allows?
 
-## Authors
+## Author
 
 * **malcolm Orr** - *Initial work* - )
