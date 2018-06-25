@@ -73,23 +73,24 @@ The final step is to sort out the persistence backend, leveraging services such 
 ## Problem Approach
 What principles did you apply?
 
-*1. Simplicity - make it easy for the developer to use and understand
-*2. Immutable - don’t make changes to the code on the fly, encapsulate it in a container and build new containers
-*3. monitor – include some capability to validate which components are healthy  
-*4. portability – don’t make too many choices at this point that would tie you into a platform such as AWS
+1. Simplicity - make it easy for the developer to use and understand
+2. Immutable - don’t make changes to the code on the fly, encapsulate it in a container and build new containers
+3. monitor – include some capability to validate which components are healthy  
+4. portability – don’t make too many choices at this point that would tie you into a platform such as AWS
 
 Explanation of the decisions you made and why
-*You can overthink these solutions and without understanding a bit more about how the client (company news) works and is trying to achieve I didn’t want to do too much based on incorrect assumptions. Using container and scripts was the simplest way to get something (MVP) working that we could work together on to refine.
+You can overthink these solutions and without understanding a bit more about how the client (company news) works and is trying to achieve I didn’t want to do too much based on incorrect assumptions. Using container and scripts was the simplest way to get something (MVP) working that we could work together on to refine.
 I also wanted to highlight the issues (as is see it) with the persistence tier as I see this as main issue that needs to be addressed to support a more scalable solution
 
 Why were certain tools selected?
-*Containers seemed a simple way to address the immutability and portability principles that I think are key and the shell scripts could be used in a variety of ways from manual to automated deployment.
+Containers seemed a simple way to address the immutability and portability principles that I think are key and the shell scripts could be used in a variety of ways from manual to automated deployment.
 
 What is your recommendation for future work if time allows?
-*Focus on a getting a scalable and distributed persistence tier 
+'''
+Focus on a getting a scalable and distributed persistence tier 
 Focus on which container platform (ECS, Kubernetes, Swarm ..) makes most sense for worldwide deployment
 Focus 
-
+'''
 
 ## Author
 
